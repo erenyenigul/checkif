@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-x-none">
+<head>
+  <meta charset="utf-8">
+   <meta name="viewport" content="initial-scale=0.5,width=device-width, shrink-to-fit=no, user-scalable=no">
+   <title>Check If | create</title>
+   <meta name="title" content="Check If | create" />
+   <meta name="description" content="Create your own link to reveal silly answers of your silly questions. Create pages to have fun with friends and make them happy or annoyed"/>
+   <meta name="keywords" content="fun check page, checkif, checkif create" />
+   <script data-ad-client="ca-pub-4548916141104157" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   <link rel="icon" type="image/x-icon" href="https://checkif.co/assests/favicon.ico" />
+   <link href="css/index.css" rel="stylesheet" />
+   <link href="css/additional.css" rel="stylesheet" />
+</head>
+<body class="bg-grey-lighter h-screen font-sans  flex overscroll-x-none" >
+  <div id="full-page" class="container  mx-auto h-full flex justify-center items-center ">
+    <div class="w-full lg:w-2/3">
+      <form name="options" >
+       
+        <div id="container" class="grid grid-cols-6 gap-4 border-teal p-8 border-t-12 mb-6 rounded-lg shadow-lg ">
+
+          <div class="col-span-1 justify-center items-center p-1">
+            <h1 id="header" class="font-hairline  text-xl font-bold text-center font-black">Check if</h1>
+          </div>
+          <div class=" col-span-5 justify-center items-center">
+            <input id="header-input" name="header" type="text" maxlength="80" class="w-full bg-white border border-grey-light hover:border-grey px-2 py-2 rounded shadow" onchange="updateByOptions()" placeholder="">
+          </div>
+          <div class=" col-start-2 col-end-6  items-center text-xl justify-center text-center " >
+            <select name = "yn" class="form-control p-3 rounded shadow focus:outline-none focus:border-gray-500 font-black" onchange="updateVerbSelect(); updateByOptions()">
+              <option value = "1" selected>Yes</option>
+              <option value = "2">No</option>
+            </select>
+            <span>,</span>
+            <select name = "pronoun" class=" form-control p-3 rounded shadow focus:outline-none focus:border-gray-500 " onchange="updateVerbSelect(); updateByOptions()">
+              <option value = "0" selected>It</option>
+              <option value = "1">She</option>
+              <option value = "2">He</option>
+              <option value = "3">You</option>
+              <option value = "4">We</option>
+              <option value = "5">They</option>
+              <option value = "6">-</option>
+            </select>
+            <select name = "verb" class="form-control mb-4 p-3 rounded shadow focus:outline-none focus:border-gray-500" onchange="updateByOptions()">
+              <option value = "0" selected>is</option>
+              <option value = "1">does</option>
+              <option value = "2">will</option>
+              <option value = "3">did</option>
+            </select>
+          </div>
+          <span id="choose-theme-text" class="col-span-6">Choose theme:</span>
+          <div id="theme-selector" class="flex items-center justify-between col-span-6" selected="3"  onclick="updateByOptions()">
+            <div class="theme-selector w-32 h-32 rounded hover:shadow-2xl opacity-25 hover:opacity-100 justify-center items-center flex"></div>
+            <div class="theme-selector w-32 h-32 rounded hover:shadow-2xl opacity-25 hover:opacity-100 justify-center items-center flex"></div>
+            <div class="theme-selector w-32 h-32 rounded hover:shadow-2xl opacity-25 hover:opacity-100 justify-center items-center flex"></div>
+            <div class="theme-selector w-32 h-32 rounded hover:shadow-2xl opacity-25 hover:opacity-100 justify-center items-center flex"></div>
+            <div class="theme-selector w-32 h-32 rounded hover:shadow-2xl opacity-25 hover:opacity-100 justify-center items-center flex"></div>
+          </div>
+          <div class="col-span-6 justify-between">
+
+<a style="cursor: pointer;" onclick="document.getElementById('t1').style.display='block'" class="float-right text-md text-right text-orange-700">how to use</a>
+          </div>
+        </div>
+      </form>
+      <div class="w-full sm:px-32">
+     
+        <p class="text-white">Copy and Share With Friends!</p>
+        <div class="opacity-75 justify-center flex bg-white rounded-lg">
+          <input type="text" class="text-white text-center bg-gray-900 text-xl p-2 w-full overflow-hidden focus:outline-none"   id="created-page-link" onchange="updateByOptions()" target="_blank" placeholder="Edit your website and link will appear here">
+          <a target="_blank" id="tosite" class="p-3 bg-gray-900 border border-l-16 border-black border-solid w-12">
+           <svg width="24" height="24" viewBox="0 0 16 16" class="icon fill-current text-gray-200 bi bi-arrow-return-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+</svg>
+          </a>
+          <button  id="copy-link-button" type="button" onclick="copyCreatedLink()" class="p-3 js-tooltip js-copy bg-gray-900 border border-left border-black border-solid" data-toggle="tooltip" data-placement="bottom"  title="Copy to clipboard">
+            <!-- icon from google's material design library -->
+            <svg  class="icon fill-current text-gray-200 "  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="24" height="24" viewBox="0 0 24 24"><path d="M17,9H7V7H17M17,13H7V11H17M14,17H7V15H14M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z" /></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer class="absolute flex inset-x-0 bottom-0 bg-black justify-between bg-opacity-25 p-4">
+      <a href='https://ko-fi.com/A0A826JFG' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.ko-fi.com/cdn/kofi2.png?v=2' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
+      <div class="hidden sm:block">
+        <a class="p-1 bg-gradient-to-r from-teal-400 to-blue-500 hidden rounded" href="https://www.instagram.com/yeniguleren/" >@yeniguleren</a>
+        <a class="p-1 bg-gradient-to-r from-teal-400 to-blue-500 hidden rounded" href="https://www.instagram.com/erincutku/" >@erincutku</a>
+        <a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcheckif.co" target="_blank" rel="noopener" aria-label="">
+          <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Create%20silly%20answers%20for%20your%20silly%20questions%3A%20Is%20Dave%20dumb%3F%20Is%20world%20flat%3F&amp;url=https%3A%2F%2Fcheckif.co" target="_blank" rel="noopener" aria-label="">
+          <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a class="resp-sharing-button__link" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Create%20silly%20answers%20for%20your%20silly%20questions%3A%20Is%20Dave%20dumb%3F%20Is%20world%20flat%3F&amp;caption=Create%20silly%20answers%20for%20your%20silly%20questions%3A%20Is%20Dave%20dumb%3F%20Is%20world%20flat%3F&amp;content=https%3A%2F%2Fcheckif.co&amp;canonicalUrl=https%3A%2F%2Fcheckif.co&amp;shareSource=tumblr_share_button" target="_blank" rel="noopener" aria-label="">
+          <div class="resp-sharing-button resp-sharing-button--tumblr resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5.5v5h5v4h-5V15c0 5 3.5 4.4 6 2.8v4.4c-6.7 3.2-12 0-12-4.2V9.5h-3V6.7c1-.3 2.2-.7 3-1.3.5-.5 1-1.2 1.4-2 .3-.7.6-1.7.7-3h3.8z"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fcheckif.co&amp;media=https%3A%2F%2Fcheckif.co&amp;description=Create%20silly%20answers%20for%20your%20silly%20questions%3A%20Is%20Dave%20dumb%3F%20Is%20world%20flat%3F" target="_blank" rel="noopener" aria-label="">
+          <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.14.5C5.86.5 2.7 5 2.7 8.75c0 2.27.86 4.3 2.7 5.05.3.12.57 0 .66-.33l.27-1.06c.1-.32.06-.44-.2-.73-.52-.62-.86-1.44-.86-2.6 0-3.33 2.5-6.32 6.5-6.32 3.55 0 5.5 2.17 5.5 5.07 0 3.8-1.7 7.02-4.2 7.02-1.37 0-2.4-1.14-2.07-2.54.4-1.68 1.16-3.48 1.16-4.7 0-1.07-.58-1.98-1.78-1.98-1.4 0-2.55 1.47-2.55 3.42 0 1.25.43 2.1.43 2.1l-1.7 7.2c-.5 2.13-.08 4.75-.04 5 .02.17.22.2.3.1.14-.18 1.82-2.26 2.4-4.33.16-.58.93-3.63.93-3.63.45.88 1.8 1.65 3.22 1.65 4.25 0 7.13-3.87 7.13-9.05C20.5 4.15 17.18.5 12.14.5z"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a class="resp-sharing-button__link" href="whatsapp://send?text=Create%20silly%20answers%20for%20your%20silly%20questions%3A%20Is%20Dave%20dumb%3F%20Is%20world%20flat%3F%20https%3A%2F%2Fcheckif.co" target="_blank" rel="noopener" aria-label="">
+          <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z"/></svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </footer>
+      <div class="howto pt-64 lg:pt-48" id="t1">
+      <div class="arka animate flex flex-col lg:flex-row" style="height:20rem;">
+        <div class="bg-gray-300 lg:w-1/2 h-full p-8">
+          <h1 class="text-2xl">How to Use</h1>
+          <p class="text-xl">Type in whatever you want your generated website will be answering.</p>
+          <p class="text-xl">Then choose your answer from the boxes for your question.</p>
+          <p class="text-xl">Your link will be automatically generated, copy the link and send it to your friends.</p>
+        </div>
+        <div class="hidden lg:block lg:w-1/2 relative">
+          <img class="absolute inset-0 h-full w-full object-cover object-center" src="assets/help.png" alt="Instructions on how to use CheckIf">
+        </div>
+      </div>
+      <div class="mt-3 justify-end text-right">
+        <a style="cursor: pointer;" class="p-2 text-lg border-solid border-2 rounded p-1 text-white bg-red-800" onclick="document.getElementById('t1').style.display='none'" name="close button">Close</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script type="module" src="js/theme_operations.js"></script>
+<script type="text/javascript" src="js/query_operations.js"></script>
+</html>
