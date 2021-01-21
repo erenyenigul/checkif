@@ -1,20 +1,16 @@
 const express = require('express');
-const hbs = require('hbs');
-const constants = require('./constants');
+const path = require('path');
 
 const app = express();
 app.use(express.static('public'));
 
-app.set('view engine', 'hbs');
-app.set('views', constants.VIEWS_DIR);
-hbs.registerPartials(constants.PARTIAL_DIR);
-
-
 app.get('', (req, res)=>{
-    res.render('index', {
-        title: 'Lol'
-    });
+    res.sendFile('../public/index.html');
 });
+
+app.get('*',(req, res)=>{
+    res.sendFile(path.join(__dirname+'/../public/page_template.html'));
+})
 
 
 app.listen(3000, ()=> console.log('Server is running on port 3000') );
