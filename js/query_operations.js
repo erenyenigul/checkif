@@ -1,4 +1,4 @@
-var websiteFoundationURL = "https://checkif.co/";
+var websiteFoundationURL = "https://main.dr7ja9rz5268b.amplifyapp.com/";
 
 let codes =
 {
