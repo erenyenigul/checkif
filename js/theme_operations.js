@@ -138,7 +138,7 @@ function createAnimation(index, animationProps){
        let imageID   = Math.floor(Math.random()*(animationProps.numImages) + 1);
        let imageName = animationProps.imageName;
        let imageFormat = animationProps.imageFormat;
-       let imagePath = ASSETS_DIRECTORY+"/"+imageName+imageID+"."+imageFormat;
+       let imagePath = '/'+ASSETS_DIRECTORY+"/"+imageName+imageID+"."+imageFormat;
        let wrapper = () => {createAnimatedObject(index, imagePath, animationProps.speed, animationProps.imgSize)};
        setTimeout(wrapper, 500*i);
      }
