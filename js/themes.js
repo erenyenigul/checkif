@@ -36,7 +36,7 @@ let purple_theme_ani = new AnimationInfo("heart",
                                         10,
                                         32);
 
-let space_theme = new Theme("url('assets/bg.jpg')",
+let space_theme = new Theme("url('/assets/bg.jpg')",
                             "",
                             "bg-black bg-opacity-75",
                             "text-yellow-400",
